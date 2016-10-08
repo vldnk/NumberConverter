@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wordnumber>
+    <baseorder id="0">
+        <nextelement>тысяч</nextelement>
+        <nextelement>миллион</nextelement>
+        <nextelement>миллиард</nextelement>
+        <nextelement>триллион</nextelement>
+        <nextelement>квадриллион</nextelement>
+        <nextelement>квинтиллион</nextelement>
+        <nextelement>секстиллион</nextelement>
+        <nextelement>септиллион</nextelement>
+        <nextelement>октиллион</nextelement>
+        <nextelement>нониллион</nextelement>
+        <nextelement>дециллион</nextelement>
+        <nextelement>андециллион</nextelement>
+        <nextelement>дуодециллион</nextelement>
+        <nextelement>тредециллион</nextelement>
+        <nextelement>кваттордециллион</nextelement>
+        <nextelement>квиндециллион</nextelement>
+        <nextelement>сексдециллион</nextelement>
+        <nextelement>септемдециллион</nextelement>
+        <nextelement>октодециллион</nextelement>
+        <nextelement>новемдециллион</nextelement>
+        <nextelement>вигинтиллион</nextelement>
+    </baseorder>
+    <baseorder id="1">
+        <nextelement>ноль</nextelement>
+        <nextelement>один</nextelement>
+        <nextelement>два</nextelement>
+        <nextelement>три</nextelement>
+        <nextelement>четыре</nextelement>
+        <nextelement>пять</nextelement>
+        <nextelement>шесть</nextelement>
+        <nextelement>семь</nextelement>
+        <nextelement>восемь</nextelement>
+        <nextelement>девять</nextelement>
+    </baseorder>
+    <baseorder id="2">
+        <nextelement>десять</nextelement>
+        <nextelement>одиннадцать</nextelement>
+        <nextelement>двенадцать</nextelement>
+        <nextelement>тринадцать</nextelement>
+        <nextelement>четырнадцать</nextelement>
+        <nextelement>пятнадцать</nextelement>
+        <nextelement>шестнадцать</nextelement>
+        <nextelement>семнадцать</nextelement>
+        <nextelement>восемнадцать</nextelement>
+        <nextelement>девятнадцать</nextelement>
+    </baseorder>
+    <baseorder id="3">
+        <nextelement>двадцать</nextelement>
+        <nextelement>тридцать</nextelement>
+        <nextelement>сорок</nextelement>
+        <nextelement>пятьдесят</nextelement>
+        <nextelement>шестьдесят</nextelement>
+        <nextelement>семьдесят</nextelement>
+        <nextelement>восемьдесят</nextelement>
+        <nextelement>девяносто</nextelement>
+    </baseorder>
+    <baseorder id="4">
+        <nextelement>сто</nextelement>
+        <nextelement>двести</nextelement>
+        <nextelement>триста</nextelement>
+        <nextelement>четыреста</nextelement>
+        <nextelement>пятьсот</nextelement>
+        <nextelement>шестьсот</nextelement>
+        <nextelement>семьсот</nextelement>
+        <nextelement>восемьсот</nextelement>
+        <nextelement>девятьсот</nextelement>
+    </baseorder>
+</wordnumber>
