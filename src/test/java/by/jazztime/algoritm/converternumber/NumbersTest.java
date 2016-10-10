@@ -1,4 +1,4 @@
-package by.jazztime.algoritm;
+package by.jazztime.algoritm.converternumber;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -25,13 +25,11 @@ public class NumbersTest {
 
     @Test
     public void testFirst() throws IOException {
-        System.out.println("Тест первый !!!");
         testXMLSheet(0);
     }
 
     @Test
     public void testSecond() throws IOException {
-        System.out.println("Тест второй !!!");
         testXMLSheet(1);
     }
 
@@ -40,7 +38,9 @@ public class NumbersTest {
         HSSFWorkbook wb = new HSSFWorkbook(in);
         Sheet sheet = wb.getSheetAt(index);
         Iterator<Row> itRow = sheet.rowIterator();
-        itRow.next();
+        Cell title = itRow.next().getCell(0);
+        if (title.getCellType() == Cell.CELL_TYPE_STRING)
+            System.out.println(title.getStringCellValue());
         while (itRow.hasNext()) {
             itRow.next().forEach(cell -> {
                 int cellType = cell.getCellType();

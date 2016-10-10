@@ -1,4 +1,4 @@
-package by.jazztime.algoritm;
+package by.jazztime.algoritm.converternumber;
 
 import java.util.ArrayList;
 import java.util.List;

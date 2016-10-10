@@ -1,8 +1,6 @@
-package by.jazztime.algoritm;
+package by.jazztime.algoritm.converternumber;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

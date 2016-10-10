@@ -1,4 +1,4 @@
-package by.jazztime.algoritm;
+package by.jazztime.algoritm.converternumber;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -90,7 +90,7 @@ public final class ConvertNumberToString {
         }
     }
 
-    private static boolean isNumber(String string) {
+    public static boolean isNumber(String string) {
         final int lengthNumberInString = string.length();
         char ch;
         for (int index = 0; index < lengthNumberInString; index++) {
@@ -123,8 +123,6 @@ public final class ConvertNumberToString {
         });
     }
 
-    @org.jetbrains.annotations.Nullable
-    @org.jetbrains.annotations.Contract(pure = true)
     private static List<String> getList(int index) {
         switch (index) {
             case 0:
@@ -139,28 +137,6 @@ public final class ConvertNumberToString {
                 return ThirdDigitOfClass.NUMBER_HANDED;
             default:
                 return null;
-        }
-    }
-
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
-        final String EXIT = "exit";
-        Scanner scanner = new Scanner(System.in);
-        String numberInString;
-        long numberInLong;
-        while (true) {
-            System.out.print("Введите число: ");
-            numberInString = scanner.next();
-            if (numberInString.toLowerCase().equals(EXIT))
-                break;
-            try {
-                numberInLong = Long.valueOf(numberInString).longValue();
-                System.out.println(numberInString + ": "
-                        + ConvertNumberToString.convert(numberInLong));
-            } catch (NumberFormatException e) {
-                System.err.println(isNumber(numberInString)
-                        ? "Ошибка. Слишком большое число для типа long"
-                        : "Ошибка. Используйте символы от 0 до 9");
-            }
         }
     }
 }
