@@ -1,5 +1,8 @@
 package by.jazztime.algoritm.converternumber;
 
+import by.jazztime.algoritm.controller.ConverterNumberController;
+import by.jazztime.algoritm.model.Words;
+import by.jazztime.algoritm.model.WordsGet;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -20,8 +23,16 @@ import static org.junit.Assert.assertEquals;
  * Created by vova on 8.10.16.
  */
 public class NumbersTest {
-    private long number;
+    private final WordsGet words;
+    private final ConverterNumberController converter;
+    private String number;
     private String text;
+
+    public NumbersTest() {
+        Words wordsController = new Words();
+        this.words = wordsController;
+        this.converter = new ConverterNumberController(wordsController);
+    }
 
     @Test
     public void testFirst() throws IOException {
@@ -46,7 +57,7 @@ public class NumbersTest {
                 int cellType = cell.getCellType();
                 switch (cellType) {
                     case Cell.CELL_TYPE_NUMERIC:
-                        number = (long) cell.getNumericCellValue();
+                        number = String.valueOf(Math.round(cell.getNumericCellValue()));
                         break;
                     case Cell.CELL_TYPE_STRING:
                         text = cell.getStringCellValue();
@@ -56,8 +67,8 @@ public class NumbersTest {
                 }
             });
             System.out.println(number + ": " + text);
-            assertEquals("Ошибка в числе: " + number, text,
-                    ConvertNumberToString.convert(number));
+            converter.toWords(number);
+            assertEquals("Ошибка в числе: " + number, text, words.getNumberSecond());
         }
         wb.close();
         in.close();
@@ -71,11 +82,12 @@ public class NumbersTest {
             String s = record.get(0);
             int a = s.indexOf(';');
             System.out.println(s);
-            number = Long.valueOf(s.substring(0, a)).longValue();
+            number = s.substring(0, a);
+            converter.toWords(number);
             assertEquals(
                     "Ошибка в числе: " + number,
                     s.substring(a + 1, s.length()),
-                    ConvertNumberToString.convert(number));
+                    words.getNumberSecond());
         });
         csvParser.close();
     }

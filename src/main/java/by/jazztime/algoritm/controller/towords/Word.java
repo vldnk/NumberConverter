@@ -1,4 +1,4 @@
-package by.jazztime.algoritm.converternumber;
+package by.jazztime.algoritm.controller.towords;
 
 /**
  * Created by vova on 6.10.16.
